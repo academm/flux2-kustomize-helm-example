@@ -5257,6 +5257,9 @@ spec:
         fsGroup: 1337
       serviceAccountName: helm-controller
       terminationGracePeriodSeconds: 600
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        operator: Exists
       volumes:
       - emptyDir: {}
         name: temp
@@ -5339,6 +5342,9 @@ spec:
         fsGroup: 1337
       serviceAccountName: kustomize-controller
       terminationGracePeriodSeconds: 60
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        operator: Exists
       volumes:
       - emptyDir: {}
         name: temp
@@ -5426,6 +5432,9 @@ spec:
         fsGroup: 1337
       serviceAccountName: notification-controller
       terminationGracePeriodSeconds: 10
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        operator: Exists
       volumes:
       - emptyDir: {}
         name: temp
@@ -5517,6 +5526,9 @@ spec:
         fsGroup: 1337
       serviceAccountName: source-controller
       terminationGracePeriodSeconds: 10
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        operator: Exists
       volumes:
       - emptyDir: {}
         name: data
