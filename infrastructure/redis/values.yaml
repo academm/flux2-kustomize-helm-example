@@ -6,6 +6,6 @@ cluster:
 master:
   persistence:
     enabled: false
-  tolerations: [master]
+  nodeSelector: {"node-role.kubernetes.io": "master"}
 replica:
-  tolerations: [master]
+  nodeSelector: {"node-role.kubernetes.io": "master"}
