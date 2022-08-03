@@ -5258,7 +5258,7 @@ spec:
       serviceAccountName: helm-controller
       terminationGracePeriodSeconds: 600
       tolerations:
-      - key: node.kubernetes.io/dedicated-to-flux
+      - key: node-role.kubernetes.io/master
         operator: Exists
       volumes:
       - emptyDir: {}
@@ -5343,7 +5343,7 @@ spec:
       serviceAccountName: kustomize-controller
       terminationGracePeriodSeconds: 60
       tolerations:
-      - key: node.kubernetes.io/dedicated-to-flux
+      - key: node-role.kubernetes.io/master
         operator: Exists
       volumes:
       - emptyDir: {}
@@ -5433,7 +5433,7 @@ spec:
       serviceAccountName: notification-controller
       terminationGracePeriodSeconds: 10
       tolerations:
-      - key: node.kubernetes.io/dedicated-to-flux
+      - key: node-role.kubernetes.io/master
         operator: Exists
       volumes:
       - emptyDir: {}
@@ -5527,7 +5527,7 @@ spec:
       serviceAccountName: source-controller
       terminationGracePeriodSeconds: 10
       tolerations:
-      - key: node.kubernetes.io/dedicated-to-flux
+      - key: node-role.kubernetes.io/master
         operator: Exists
       volumes:
       - emptyDir: {}
