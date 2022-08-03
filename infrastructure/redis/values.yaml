@@ -8,7 +8,7 @@ master:
     enabled: false
   tolerations:
   - key: "node-role.kubernetes.io"
-    operator: "Equal"
+    operator: "Exists"
     value: "master"
     effect: "NoExecute"
 replica:
@@ -16,6 +16,6 @@ replica:
     enabled: false
   tolerations:
   - key: "node-role.kubernetes.io"
-    operator: "Equal"
+    operator: "Exists"
     value: "master"
     effect: "NoExecute"
