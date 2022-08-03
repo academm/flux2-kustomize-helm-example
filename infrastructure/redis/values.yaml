@@ -6,8 +6,8 @@ cluster:
 master:
   persistence:
     enabled: false
-  tolerations: ["node-role.kubernetes.io": "master",]
+  tolerations: [ key: "node-role.kubernetes.io", value: "master", operator: "Equal", effect: "NoSchedule" ]
 replica:
   persistence:
     enabled: false
-  tolerations: ["node-role.kubernetes.io": "master",]
+  tolerations: [ key: "node-role.kubernetes.io", value: "master", operator: "Equal", effect: "NoSchedule" ]
