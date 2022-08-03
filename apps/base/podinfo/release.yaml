@@ -24,3 +24,6 @@ spec:
       enabled: true
       annotations:
         kubernetes.io/ingress.class: nginx
+    tolerations:
+    - key: "node-role.kubernetes.io/master"
+      operator: "Exists" 
