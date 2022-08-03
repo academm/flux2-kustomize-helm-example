@@ -6,3 +6,6 @@ cluster:
 master:
   persistence:
     enabled: false
+  tolerations: "node-role.kubernetes.io/master"
+replica:
+  tolerations: "node-role.kubernetes.io/master"
