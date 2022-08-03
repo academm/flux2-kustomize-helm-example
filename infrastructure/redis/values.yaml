@@ -8,4 +8,6 @@ master:
     enabled: false
   nodeSelector: {"node-role.kubernetes.io": "master"}
 replica:
+  persistence:
+    enabled: false
   nodeSelector: {"node-role.kubernetes.io": "master"}
